@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nav Bar</title>
+
+    <meta charset="utf-8" />
+    <title>Nav Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="about.css" />
+
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="1home.html"><h2>COOKBOOK</h2></a>
+      </div>
+      <div class="nav-items">
+        <ul class="overview">
+          <li><a href="1home.html">Home</a></li>
+          <li><a href="2Dashboard.html">Dashboard</a></li>
+          <li><a href="3Dishes.html">Dishes</a></li>
+          <li><a href="4Recipes.html">Recipes</a></li>
+        </ul>
+        <ul class="account">
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="question.html">?</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    
+
+    
+
+    <section>
+      <div class='air air1'></div>
+      <div class='air air2'></div>
+      <div class='air air3'></div>
+      <div class='air air4'></div>
+      
+      <div class="images-section">
+        <img src="Screenshot 2024-09-17 215209.png" alt="Image 1" />
+        <img src="b5770f8a-96b7-426e-9cb9-64eaa78fa8b5.jpg" alt="Image 2" />
+        <img src="68433d44-2417-4433-a945-02b3d62dabde.jpg" alt="Image 3" />
+    </div>
+    </section>
+
+
+    <div class="responsive-container-block bigContainer">
+      <div class="responsive-container-block Container">
+        <p class="text-blk heading">
+          About Us
+        </p>
+        <p class="text-blk subHeading">
+          We are a team of information technology bachelor's degree (BSIT) students who are all passionate about web development. As young tech individuals, we are motivated to develop modern and useful websites that demonstrate our evolving skills in design, coding, and have a huge room for improvements.
+        </p>
+        <div class="social-icons-container">
+          <a class="social-icon">
+            <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb33.png">
+          </a>
+          <a class="social-icon">
+            <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb35.png">
+          </a>
+          <a class="social-icon">
+            <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb36.png">
+          </a>
+          
+        </div>
+        <div class="container">
+          <h1>Feedback</h1>
+          <button id="promptButton">Please Share Your Experience</button>
+          <div id="response" class="response"></div>
+      </div>
+      </div>
+    </div>
+
+    
+
+  <script>
+    document.getElementById('promptButton').addEventListener('click', function() {
+    let userInput = prompt("Share your feedback about our website:");
+    const responseDiv = document.getElementById('response');
+    
+    if (userInput) {
+        responseDiv.innerText = "Feedback: " + userInput;
+        
+        setTimeout(function() {
+            let improvementInput = prompt("Any suggestions for improvement?");
+            if (improvementInput) {
+                responseDiv.innerText += "\nSuggestion: " + improvementInput;
+            } else {
+                responseDiv.innerText += "\nNo suggestion provided.";
+            }
+        }, 2000);
+    } else {
+        responseDiv.innerText = "No feedback provided.";
+    }
+});
+
+  </script>
+    
+  
+   
+</body>
+</html>

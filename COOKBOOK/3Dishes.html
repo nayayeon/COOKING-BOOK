@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nav Bar</title>
+
+    <meta charset="utf-8" />
+    <title>Nav Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="dish.css" />
+
+  </head>
+  <body style="background-color: #596e79;">
+    <nav>
+      <div class="logo">
+        <a href="1home.html"><h2>COOKBOOK</h2></a>
+      </div>
+      <div class="nav-items">
+        <ul class="overview">
+          <li><a href="1home.html">Home</a></li>
+          <li><a href="2Dashboard.html">Dashboard</a></li>
+          <li><a href="3Dishes.html">Dishes</a></li>
+          <li><a href="4Recipes.html">Recipes</a></li>
+        </ul>
+        <ul class="account">
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="question.html">?</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main></main>
+      <section id="recipes">
+          <article class="recipe">
+              <h2>Boneless Bangus</h2>
+              <img src="1pic.jpg" alt="Adobo" class="recipe-image">
+              <div class="description hidden">Fried Bangus or Fried milkfish is a simple dish that is packed with flavors. The milkfish alone has its deliciously rich taste (especially the belly) while the marinade gives it a sour spicy flavor.</div>
+          </article>
+          <article class="recipe">
+              <h2>Adobong Manok</h2>
+              <img src="2pic.jpg" alt="Sinigang" class="recipe-image">
+              <div class="description hidden">Adobong manok is a traditional stew originating from the Philippines. This type of Filipino adobo is made with a combination of chicken, garlic, onions, bay leaves, peppercorns, oil, brown sugar, soy sauce, and white vinegar.</div>
+          </article>
+          <article class="recipe">
+              <h2>Lumpia</h2>
+              <img src="3pic.jpg" alt="Pancit" class="recipe-image">
+              <div class="description hidden">This is a traditional Filipino recipe for lumpia, or fried spring rolls. They're made with paper-thin lumpia wrappers and filled with a savory mixture of ground pork, cabbage, and other vegetables.</div>
+          </article>
+          <article class="recipe">
+              <h2>Pinakbet</h2>
+              <img src="4pic.jpg" alt="Lechon" class="recipe-image">
+              <div class="description hidden">Pinakbet is a popular dish from the northern part of the Philippines, the Ilocos region. This dish typically includes vegetables like eggplant, squash, and bitter melon, bagoong (shrimp or fish paste), garlic, and ginger.</div>
+          </article>
+          <article class="recipe">
+              <h2>Sinigang na Baboy</h2>
+              <img src="5pic.jpg" alt="Halo-Halo" class="recipe-image">
+              <div class="description hidden">Sinigang na Baboy is the ultimate comfort food! Made with pork ribs, vegetables, and tamarind-flavored broth, it's hearty and delicious on its own or served with steamed rice.</div>
+          </article>
+          <article class="recipe">
+              <h2>Kare-Kare</h2>
+              <img src="6pic.jpg" alt="Chicken Inasal" class="recipe-image">
+              <div class="description hidden">A peanut stew made with oxtail and vegetables, often served with bagoong. Serve with steamed rice for a complete meal</div>
+          </article>
+          <article class="recipe">
+              <h2>Sisig</h2>
+              <img src="7pic.jpg" alt="Bibingka" class="recipe-image">
+              <div class="description hidden">Sisig is a popular Filipino dish made by boiling, chopping, and grilling parts of pig's head such as ears, cheeks, The meat is combined with fried onions, sili, and chicken livers, and the whole concoction is traditionally topped with a raw egg.</div>
+          </article>
+          <article class="recipe">
+              <h2>Lechon</h2>
+              <img src="8pic.jpg" alt="Ginataang Bilo-Bilo" class="recipe-image">
+              <div class="description hidden">Lechon available in the South, the Visayas and Mindanao regions, are usually stuffed with lemongrass, garlic, spring onions, and chilies but the stuffing can range from anything like ginger, peppers, garlic chives to even pineapples.</div>
+          </article>
+          <article class="recipe">
+              <h2>Escabeche Lapu Lapu</h2>
+              <img src="9pic.jpg" alt="Kare-Kare" class="recipe-image">
+              <div class="description hidden">Escabeche Lapu Lapu is easy to make for family dinners yet fancy enough for special occasions. This Filipino-style sweet and sour fish with pickled vegetables and sweet and tangy sauce is delicious with steamed rice and sure to be a crowd favorite.</div>
+          </article>
+          <article class="recipe">
+              <h2>Ginisang Kangkong</h2>
+              <img src="10pic.jpg" alt="Laing" class="recipe-image">
+              <div class="description hidden">Stir-Fried Kangkong, also known as Ginisang Kangkong, is one of the easiest and most delicious side dishes to prepare with the slightly sweet and fresh flavor of kangkong. </div>
+          </article>
+          <article class="recipe">
+              <h2>Paksiw</h2>
+              <img src="11pic.jpg" alt="Turon" class="recipe-image">
+              <div class="description hidden">Paksiw is a term used to refer to dishes cooked in vinegar and garlic. This could pertain to meats like pork (Paksiw na Pata and Lechon Paksiw are some of the examples) and seafood.</div>
+          </article>
+          <article class="recipe">
+              <h2>Papaitan</h2>
+              <img src="12pic.jpg" alt="Pocherong Baka" class="recipe-image">
+              <div class="description hidden">Papaitan is a famous Ilocano soup dish mostly composed of cow or goat innards. The name of this dish was derived from the Filipino word “Pait”, which means “bitter”.</div>
+          </article>
+      </section>
+  </main>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const recipes = document.querySelectorAll('.recipe');
+    recipes.forEach(recipe => {
+        recipe.addEventListener('mouseenter', () => {
+            const description = recipe.querySelector('.description');
+            description.classList.remove('hidden');
+        });
+
+        recipe.addEventListener('mouseleave', () => {
+            const description = recipe.querySelector('.description');
+            description.classList.add('hidden');
+        });
+    });
+});
+
+
+  </script>
+
+
+    </body>
+
+</html>
